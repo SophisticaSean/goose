@@ -239,7 +239,7 @@ func EnsureDBVersion(db *sql.DB) (int64, error) {
 		toSkip = append(toSkip, row.VersionID)
 	}
 
-	return 0, ErrNoNextVersion
+	return 0, nil
 }
 
 // Create the goose_db_version table
